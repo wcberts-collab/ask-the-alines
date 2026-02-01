@@ -4,11 +4,16 @@
 <meta charset="UTF-8">
 <title>Ask Away</title>
 <style>
+  /* System font stack for macOS vibe */
+  body, input, button, #answer, h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                 Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
   body {
     margin: 0;
     padding: 40px 20px;
-    font-family: serif;
-    background: #2563EB; /* Bright electric blue */
+    background: #2563EB; /* Electric blue */
     color: #fff;
   }
 
@@ -18,13 +23,13 @@
     border-radius: 14px;
     padding: 24px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.1); /* Slight frosted effect behind content */
+    background: rgba(255, 255, 255, 0.1); /* Slight frosted effect */
     backdrop-filter: blur(6px);
   }
 
   h3 {
     margin-bottom: 20px;
-    font-weight: normal;
+    font-weight: 500;
     color: #fff;
   }
 
@@ -93,8 +98,8 @@ const answers = [
   "Retrace your steps.",
   "We have lost sight of the answer.",
   "Embrace the void.",
-  
-  // Trendy / internet faves
+
+  // Trendy / internet culture
   "Do it for the plot.",
   "Lore is endless.",
   "The lion does not concern himself with such trivial things.",
@@ -102,15 +107,19 @@ const answers = [
   "This is peak chaos.",
   "Vibe check failed.",
   "Main character energy activated.",
-  "Iconic.",
+  "Be iconic.",
   "IYKYK.",
   "Sending sus vibes.",
   "Plot twist incoming.",
   "No cap.",
   "The tea is hot.",
-  "Become a legend.",
+  "Consider resetting."
+  "Turn to witchcraft."
+  "WDGAF."
+  "Subscribe to your own substack."
+  "We stan a legend.",
   "Gaslight, gatekeep, girlboss.",
-  "The gods approve."
+  "The Wi-Fi gods approve."
 ];
 
 function answer() {
