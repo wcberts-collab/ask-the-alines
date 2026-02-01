@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ask the Aliens</title>
+<style>
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: serif;
+    background: #fafafa;
+  }
+
+  .box {
+    max-width: 420px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+
+  input {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: 14px auto 0;
+    width: 60%;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  #answer {
+    margin-top: 24px;
+    font-size: 18px;
+    min-height: 28px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h3>🛸 Ask the Others</h3>
+
+  <input id="q" placeholder="Transmit your question…" />
+
+  <button onclick="answer()">Consult</button>
+
+  <div id="answer"></div>
+</div>
+
+<script>
+const answers = [
+  "Refer to the void.",
+  "The stars do not align for this.",
+  "You are not meant to know yet.",
+  "It's possible – but the path will be strange.",
+  "They are listening.",
+  "Retrace your steps.",
+  "Yes — but at a cost.",
+  "We have lost sight of the answer.",
+  "The outcome has already shifted.",
+  "Ask again when the sky is darker."
+];
+
+function answer() {
+  const q = document.getElementById("q").value.trim();
+  const box = document.getElementById("answer");
+
+  if (!q) {
+    box.innerText = "A question must be transmitted.";
+    return;
+  }
+
+  box.innerText = "🛸 " + answers[Math.floor(Math.random() * answers.length)];
+}
+</script>
+
+</body>
+</html>
